@@ -1,10 +1,10 @@
-## 📌 Proyecto MLOps: Ambiente de Desarrollo con Docker y JupyterLab
+# Proyecto MLOps: Ambiente de Desarrollo con Docker y JupyterLab
 
-Este repositorio ofrece un entorno de desarrollo integral para un proyecto de Machine Learning, enfocado en demostrar capacidades clave como la ingesta, validación y transformación de datos, junto con el versionado tanto del código como del entorno de desarrollo. Mediante Docker, se proporciona un ambiente aislado que permite la ejecución de notebooks de Jupyter, garantizando la reproducibilidad de los experimentos y facilitando la colaboración entre desarrolladores.
+Este repositorio contiene un entorno de desarrollo para un proyecto de Machine Learning en el que se demuestran capacidades de ingesta, validación y transformación de datos, así como el versionado del código y del ambiente de desarrollo. El objetivo es proveer un entorno aislado (mediante Docker) que permita ejecutar notebooks de Jupyter, facilitando la reproducibilidad y la colaboración.
 
 ---
 
-## 📂 Tabla de Contenido
+## Tabla de Contenido
 
 1. [Contexto General del Proyecto](#contexto-general-del-proyecto)
 2. [Arquitectura y Archivos Principales](#arquitectura-y-archivos-principales)
@@ -16,7 +16,7 @@ Este repositorio ofrece un entorno de desarrollo integral para un proyecto de Ma
 
 ---
 
-## 💾 Contexto General del Proyecto
+## Contexto General del Proyecto
 
 Este proyecto está enfocado en la **creación de un pipeline de datos** que incluye:
 
@@ -32,9 +32,9 @@ El dataset principal propuesto es una variante del **conjunto de datos de tipo d
 
 ---
 
-## 📊 Arquitectura y Archivos Principales
+## Arquitectura y Archivos Principales
 
-En el repositorio encontrara:
+En el repositorio encontrarás:
 
 - **`Dockerfile`**: Define la imagen base (Python 3.9) y las dependencias necesarias (paquetes de Python, Jupyter, TFX, etc.).
 - **`docker-compose.yml`**: Archivo de configuración para orquestar y levantar el contenedor.  
@@ -45,55 +45,49 @@ En el repositorio encontrara:
 - **`requirements.txt`**: Listado de las dependencias de Python que serán instaladas en el contenedor.
 - **Carpeta `work/`**: Directorio de trabajo mapeado al contenedor, donde se ubican los notebooks (`.ipynb`) y el código fuente (`.py`).
 
-Nota: Es importante prestar atención a las versiones de tfx y apache-beam especificadas en el archivo requirements.txt, ya que incompatibilidades entre ellas pueden generar conflictos en JupyterLab al momento de importar la librerias.
-
 ---
 
-## 🛠 Requisitos Previos
+## Requisitos Previos
 
 - **Docker** instalado y funcionando en tu sistema.
 - **Docker Compose** instalado.  
-  > Verifique con `docker -v` y `docker-compose -v` que ambas herramientas estén disponibles.
+  > Verifica con `docker -v` y `docker-compose -v` que ambas herramientas estén disponibles.
 
 ---
 
-## 🚀 Pasos para Levantar el Contenedor
+## Pasos para Levantar el Contenedor
 
-1️⃣. **Clonar el repositorio** o descargarlo en tu máquina local.
-
+1. **Clonar el repositorio** o descargarlo en tu máquina local.
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd <NOMBRE_DE_LA_CARPETA>
-  ```
+   git clone https://github.com/JohnSanchez27/Proyecto_1_MLOps.git #HTTPS
+   git clone git@github.com:JohnSanchez27/Proyecto_1_MLOps.git #SSH
+   cd Proyecto_1_MLOps
 
-2️⃣. **Construir la imagen** definida en el Dockerfile usando Docker Compose.
 
+2. **Construir la imagen** definida en el Dockerfile usando Docker Compose:
    ```bash
     docker-compose build
-  ```
 
-3️⃣. **Iniciar el contenedor** den segundo plano:
+3. **Iniciar el contenedor** den segundo plano:
    ```bash
     docker-compose up -d
-  ```
 
-4️⃣. **Verificar que el contenedor esté corriendo:**
+4. **Verificar que el contenedor esté corriendo:**
    ```bash
     docker ps
-  ```
 
-**Nota:** Con la ejecución de los pasos anteriores, debería poder ver un contenedor llamado `desarrollo_container` (o el que haya definido en `docker-compose.yml`) en ejecución.
+    Deberías ver un contenedor llamado desarrollo_container (o el que hayas definido en docker-compose.yml) en ejecución.
 
----
-## 🤖 Acceso a JupyterLab
+## Acceso a JupyterLab
 
-- Una vez que el contenedor este arriba, abra su navegador y navegue a:
+- Una vez que el contenedor está arriba, abre tu navegador y navega a:
 
     http://localhost:8888
 
-- JupyterLab solicitará un token de acceso que se mostrará en la consola de su terminal (donde corriste docker-compose up) o en los logs del contenedor. Copie ese token y péguelo en el navegador para iniciar sesión. (Alternativamente, puede usar la URL completa con el token que se imprime en la consola.)
+- JupyterLab solicitará un token de acceso que se mostrará en la consola de tu terminal (donde corriste docker-compose up) o en los logs del contenedor. Copia ese token y pégalo en el navegador para iniciar sesión. (Alternativamente, puedes usar la URL completa con el token que se imprime en la consola.)
 
-## 🎨Importancia del Volumen ./work:/work
+
+## Importancia del Volumen ./work:/work
 
 El volumen definido en docker-compose.yml:
 
@@ -109,7 +103,7 @@ mapea la carpeta local work/ a la carpeta /work dentro del contenedor. Esto impl
 
 - Facilidad de Uso: No necesitas reconstruir la imagen para cada cambio en los notebooks o scripts.
 
-## ⚡ Sugerencias y Notas Adicionales
+## Sugerencias y Notas Adicionales
 
 - **Uso de TFX y Beam**: Se incluyeron paquetes como `apache-beam[interactive]`, `tfx`, `tensorflow-data-validation`, etc. Esto permite la **ingesta, validación y transformación** de datos de forma escalable y reproducible.
 
@@ -127,5 +121,3 @@ Si deseas eliminar también las imágenes construidas:
   ```bash
   docker-compose down --rmi all
   ```
-
-¡Y con esto, su entorno de desarrollo queda listo para usar!
