@@ -45,7 +45,7 @@ En el repositorio encontrara:
 - **`requirements.txt`**: Listado de las dependencias de Python que serán instaladas en el contenedor.
 - **Carpeta `work/`**: Directorio de trabajo mapeado al contenedor, donde se ubican los notebooks (`.ipynb`) y el código fuente (`.py`).
 
-Nota: Es importante prestar atención a las versiones de tfx y apache-beam especificadas en el archivo requirements.txt, ya que incompatibilidades entre ellas pueden generar conflictos.
+Nota: Es importante prestar atención a las versiones de tfx y apache-beam especificadas en el archivo requirements.txt, ya que incompatibilidades entre ellas pueden generar conflictos en JupyterLab al momento de importar la librerias.
 
 ---
 
@@ -76,16 +76,15 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
    ```bash
     docker ps
 
-    Deberías ver un contenedor llamado desarrollo_container (o el que hayas definido en docker-compose.yml) en ejecución.
+    Con la ejecucion de los pasos anteriores, debería poder ver un contenedor llamado desarrollo_container (o el que haya definido en docker-compose.yml) en ejecución.
 
 ## Acceso a JupyterLab
 
-- Una vez que el contenedor está arriba, abre tu navegador y navega a:
+- Una vez que el contenedor este arriba, abra su navegador y navegue a:
 
     http://localhost:8888
 
-- JupyterLab solicitará un token de acceso que se mostrará en la consola de tu terminal (donde corriste docker-compose up) o en los logs del contenedor. Copia ese token y pégalo en el navegador para iniciar sesión. (Alternativamente, puedes usar la URL completa con el token que se imprime en la consola.)
-
+- JupyterLab solicitará un token de acceso que se mostrará en la consola de su terminal (donde corriste docker-compose up) o en los logs del contenedor. Copie ese token y péguelo en el navegador para iniciar sesión. (Alternativamente, puede usar la URL completa con el token que se imprime en la consola.)
 
 ## Importancia del Volumen ./work:/work
 
@@ -122,4 +121,4 @@ Si deseas eliminar también las imágenes construidas:
   docker-compose down --rmi all
   ```
 
-¡Y con esto, tu entorno de desarrollo queda listo para usar!
+¡Y con esto, su entorno de desarrollo queda listo para usar!
