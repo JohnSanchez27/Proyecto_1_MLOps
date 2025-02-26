@@ -85,7 +85,7 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
 **Nota:** Con la ejecución de los pasos anteriores, debería poder ver un contenedor llamado `desarrollo_container` (o el que haya definido en `docker-compose.yml`) en ejecución.
 
 ---
-## Acceso a JupyterLab
+## 🤖 Acceso a JupyterLab
 
 - Una vez que el contenedor este arriba, abra su navegador y navegue a:
 
@@ -93,7 +93,7 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
 
 - JupyterLab solicitará un token de acceso que se mostrará en la consola de su terminal (donde corriste docker-compose up) o en los logs del contenedor. Copie ese token y péguelo en el navegador para iniciar sesión. (Alternativamente, puede usar la URL completa con el token que se imprime en la consola.)
 
-## Importancia del Volumen ./work:/work
+## 🎨Importancia del Volumen ./work:/work
 
 El volumen definido en docker-compose.yml:
 
@@ -109,7 +109,7 @@ mapea la carpeta local work/ a la carpeta /work dentro del contenedor. Esto impl
 
 - Facilidad de Uso: No necesitas reconstruir la imagen para cada cambio en los notebooks o scripts.
 
-## Sugerencias y Notas Adicionales
+## ⚡ Sugerencias y Notas Adicionales
 
 - **Uso de TFX y Beam**: Se incluyeron paquetes como `apache-beam[interactive]`, `tfx`, `tensorflow-data-validation`, etc. Esto permite la **ingesta, validación y transformación** de datos de forma escalable y reproducible.
 
