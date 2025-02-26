@@ -64,7 +64,6 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DE_LA_CARPETA>
 
-
 2. **Construir la imagen** definida en el Dockerfile usando Docker Compose:
    ```bash
     docker-compose build
