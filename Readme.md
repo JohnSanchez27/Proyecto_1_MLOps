@@ -1,6 +1,6 @@
-# Proyecto MLOps: Ambiente de Desarrollo con Docker y JupyterLab
+## Proyecto MLOps: Ambiente de Desarrollo con Docker y JupyterLab
 
-Este repositorio contiene un entorno de desarrollo para un proyecto de Machine Learning en el que se demuestran capacidades de ingesta, validación y transformación de datos, así como el versionado del código y del ambiente de desarrollo. El objetivo es proveer un entorno aislado (mediante Docker) que permita ejecutar notebooks de Jupyter, facilitando la reproducibilidad y la colaboración.
+Este repositorio ofrece un entorno de desarrollo integral para un proyecto de Machine Learning, enfocado en demostrar capacidades clave como la ingesta, validación y transformación de datos, junto con el versionado tanto del código como del entorno de desarrollo. Mediante Docker, se proporciona un ambiente aislado que permite la ejecución de notebooks de Jupyter, garantizando la reproducibilidad de los experimentos y facilitando la colaboración entre desarrolladores.
 
 ---
 
