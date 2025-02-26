@@ -65,20 +65,22 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
    git clone <URL_DEL_REPOSITORIO>
    cd <NOMBRE_DE_LA_CARPETA>
   ```
-2️⃣. **Construir la imagen** definida en el Dockerfile usando Docker Compose.
 
+2️⃣. **Construir la imagen** definida en el Dockerfile usando Docker Compose.
 
    ```bash
     docker-compose build
+  ```
 
 3️⃣. **Iniciar el contenedor** den segundo plano:
    ```bash
     docker-compose up -d
+  ```
 
 4️⃣. **Verificar que el contenedor esté corriendo:**
    ```bash
     docker ps
-
+  ```
     Con la ejecucion de los pasos anteriores, debería poder ver un contenedor llamado desarrollo_container (o el que haya definido en docker-compose.yml) en ejecución.
 ---
 ## Acceso a JupyterLab
