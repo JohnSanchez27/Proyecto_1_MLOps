@@ -32,7 +32,7 @@ El dataset principal propuesto es una variante del **conjunto de datos de tipo d
 
 ---
 
-## Arquitectura y Archivos Principales
+## 📊 Arquitectura y Archivos Principales
 
 En el repositorio encontrara:
 
@@ -49,7 +49,7 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
 
 ---
 
-## Requisitos Previos
+## 🛠 Requisitos Previos
 
 - **Docker** instalado y funcionando en tu sistema.
 - **Docker Compose** instalado.  
