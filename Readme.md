@@ -34,7 +34,7 @@ El dataset principal propuesto es una variante del **conjunto de datos de tipo d
 
 ## Arquitectura y Archivos Principales
 
-En el repositorio encontrarás:
+En el repositorio encontrara:
 
 - **`Dockerfile`**: Define la imagen base (Python 3.9) y las dependencias necesarias (paquetes de Python, Jupyter, TFX, etc.).
 - **`docker-compose.yml`**: Archivo de configuración para orquestar y levantar el contenedor.  
@@ -45,13 +45,15 @@ En el repositorio encontrarás:
 - **`requirements.txt`**: Listado de las dependencias de Python que serán instaladas en el contenedor.
 - **Carpeta `work/`**: Directorio de trabajo mapeado al contenedor, donde se ubican los notebooks (`.ipynb`) y el código fuente (`.py`).
 
+Nota: Es importante prestar atención a las versiones de tfx y apache-beam especificadas en el archivo requirements.txt, ya que incompatibilidades entre ellas pueden generar conflictos.
+
 ---
 
 ## Requisitos Previos
 
 - **Docker** instalado y funcionando en tu sistema.
 - **Docker Compose** instalado.  
-  > Verifica con `docker -v` y `docker-compose -v` que ambas herramientas estén disponibles.
+  > Verifique con `docker -v` y `docker-compose -v` que ambas herramientas estén disponibles.
 
 ---
 
