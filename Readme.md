@@ -80,7 +80,7 @@ Nota: Es importante prestar atención a las versiones de tfx y apache-beam espec
     docker ps
 
     Con la ejecucion de los pasos anteriores, debería poder ver un contenedor llamado desarrollo_container (o el que haya definido en docker-compose.yml) en ejecución.
-
+---
 ## Acceso a JupyterLab
 
 - Una vez que el contenedor este arriba, abra su navegador y navegue a:
