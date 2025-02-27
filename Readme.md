@@ -34,7 +34,27 @@ El dataset principal propuesto es una variante del **conjunto de datos de tipo d
 
 ## Arquitectura y Archivos Principales
 
-En el repositorio encontrarás:
+Este proyecto forma parte del curso de MLOps y tiene como objetivo construir un entorno de desarrollo para Machine Learning utilizando Docker, Jupyter Notebook y TensorFlow Extended (TFX). Se implementan procesos de transformación y validación de datos como parte de una canalización de datos.
+
+```bash
+Proyecto/
+|-- work/
+|   |-- Transformacion_Datos/
+|   |   |-- data/
+|   |   |-- tfx_pipeline/
+|   |   |   |-- census_constants.py
+|   |   |   |-- census_transform.py
+|   |   |-- TFT.ipynb
+|   |-- Validacion_de_Datos/
+|   |   |-- cubierta_forestal.csv
+|   |   |-- TFDV.ipynb
+|-- Docker-compose.yml
+|-- Dockerfile
+|-- Readme.md
+|-- requirements.txt
+```
+
+En el repositorio encontrará:
 
 - **`Dockerfile`**: Define la imagen base (Python 3.9) y las dependencias necesarias (paquetes de Python, Jupyter, TFX, etc.).
 - **`docker-compose.yml`**: Archivo de configuración para orquestar y levantar el contenedor.  
